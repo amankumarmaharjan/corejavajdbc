@@ -1,0 +1,13 @@
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/entity/User.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/repository/impl/UserRepository.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/config/ConnectionFactory.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/utitilty/PropertiesFIleReader.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/Main.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/utitilty/QueryUtils.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/repository/impl/UserRepositoryImpl.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/config/RepositoryFactory.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/repository/impl/CrudRepository.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/utitilty/ObjectUtils.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/repository/impl/SimpleJpaRepository.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/config/DbProperty.java
+/Users/amanmaharjan/Desktop/CoreJDBC/src/main/java/org/example/utitilty/Assert.java
