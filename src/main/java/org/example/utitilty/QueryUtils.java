@@ -2,7 +2,6 @@ package org.example.utitilty;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,9 +25,9 @@ public class QueryUtils {
         Arrays.stream(fields).forEach(field -> {
             try {
                 field.setAccessible(true);
-                stringBuilder.append("\'")
+                stringBuilder.append("'")
                         .append(field.get(entity))
-                        .append("\',");
+                        .append("',");
             } catch (IllegalAccessException e) {
                 throw new RuntimeException(e);
             }
@@ -95,9 +94,7 @@ public class QueryUtils {
     }
 
     public static <T, ID> String getDeleteQuery(Class<T> type, ID id) {
-        Field field = Arrays.stream(type.getDeclaredFields())
-                .filter(f -> f.isAnnotationPresent(Id.class))
-                .findFirst().orElseThrow(() -> new RuntimeException("@Id not found"));
+        Field field = getField(type);
         StringBuilder stringBuilder = new StringBuilder("DELETE  FROM ");
         stringBuilder.append(type.getSimpleName());
         stringBuilder.append(" ");
@@ -110,4 +107,19 @@ public class QueryUtils {
         logger.log(Level.INFO, "Query: " + stringBuilder);
         return stringBuilder.toString();
     }
+
+    public static <S> String getDeleteAllQuery(Class<S> s) {
+        StringBuilder stringBuilder = new StringBuilder("DELETE * FROM ");
+        stringBuilder.append(s.getSimpleName());
+        stringBuilder.append(";");
+        logger.log(Level.INFO, "Query: " + stringBuilder);
+        return stringBuilder.toString();
+    }
+
+    public static <T> Field getField(Class<T> type) {
+        return Arrays.stream(type.getDeclaredFields())
+                .filter(f -> f.isAnnotationPresent(Id.class))
+                .findFirst().orElseThrow(() -> new RuntimeException("@Id not found"));
+    }
+
 }

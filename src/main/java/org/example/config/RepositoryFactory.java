@@ -1,8 +1,7 @@
 package org.example.config;
 
-import org.example.entity.User;
+import org.example.repository.CrudRepository;
 import org.example.repository.impl.UserRepositoryImpl;
-import org.example.repository.impl.CrudRepository;
 
 final public class RepositoryFactory {
 

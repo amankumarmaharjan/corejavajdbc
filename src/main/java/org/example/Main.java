@@ -2,8 +2,7 @@ package org.example;
 
 import org.example.config.RepositoryFactory;
 import org.example.entity.User;
-import org.example.repository.impl.UserRepository;
-import org.w3c.dom.ls.LSOutput;
+import org.example.repository.UserRepository;
 
 import java.util.Optional;
 
@@ -17,11 +16,17 @@ public class Main {
 //        displayOperation();
 //        findById();
 //        findExistById();
-        getCount();
+//        getCount();
+//        deleteById();
+        displayOperation();
+    }
+
+    private static void deleteById() {
+        userRepository.deleteById(1);
     }
 
     private static void getCount() {
-        System.out.println( userRepository.count());
+        System.out.println(userRepository.count());
     }
 
     private static void findById() {
@@ -30,8 +35,8 @@ public class Main {
     }
 
     private static void findExistById() {
-       if( userRepository.existsById(1))
-           System.out.println("User exists");
+        if (userRepository.existsById(1))
+            System.out.println("User exists");
     }
 
     private static void deleteOperation() {
