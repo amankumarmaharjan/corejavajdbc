@@ -1,6 +1,6 @@
 
 
-package org.example.repository.impl;
+package org.example.repository;
 
 import java.util.Optional;
 
